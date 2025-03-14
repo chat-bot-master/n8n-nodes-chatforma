@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-chatformacom",
+  "name": "n8n-nodes-chatforma",
   "version": "1.0.0",
   "description": "Chatforma module for community n8n nodes.",
   "keywords": [
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HelenKuharuk/n8n-nodes-chatformacom.git"
+    "url": "https://github.com/chat-bot-master/n8n-nodes-chatforma.git"
   },
   "engines": {
     "node": ">=18.10",
@@ -22,7 +22,7 @@
   "packageManager": "pnpm@9.1.4",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+
     "build": "tsc",
     "dev": "tsc --watch",
     "format": "prettier nodes credentials --write",
