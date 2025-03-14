@@ -1,0 +1,62 @@
+{
+  "name": "n8n-nodes-chatformacom",
+  "version": "1.0.0",
+  "description": "Chatforma module for community n8n nodes.",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.chatforma.com/",
+  "author": {
+    "name": "Elena Kuharuk",
+    "email": "helenkuharuk@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HelenKuharuk/n8n-nodes-chatformacom.git"
+  },
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=9.1"
+  },
+  "packageManager": "pnpm@9.1.4",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/Chatforma.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Chatforma/Chatforma.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.4",
+    "@types/request": "^2.48.12",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "axios": "^1.8.3",
+    "n8n-workflow": "*",
+    "request": "^2.88.2"
+  }
+}
